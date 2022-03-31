@@ -2,8 +2,8 @@
     "name": "@rubecula/rollup-plugin-bundle-scss",
     "version": "0.1.2",
     "description": "",
-    "main": "main.js",
-    "module": "main.js",
+    "main": "main.mjs",
+    "module": "main.mjs",
     "type": "module",
     "scripts": {
         "pretty": "prettier . --write --tab-width 4 --print-width 120"
