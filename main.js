@@ -3,13 +3,8 @@ import * as sass from "node-sass";
 import { green, underline } from "colorette";
 import * as path from "path";
 
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
+const __dirname = path.resolve();
 console.log(
-    __filename,
     __dirname,
 )
 
