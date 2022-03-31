@@ -1,16 +1,21 @@
 {
-  "name": "@rubecula/rollup-plugin-bundle-scss",
-  "version": "0.1.2",
-  "description": "",
-  "main": "main.js",
-  "module": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Robin van der Noord",
-  "license": "MIT",
-  "devDependencies": {
-    "colorette": "^2.0.16",
-    "node-sass": "^7.0.1"
-  }
+    "name": "@rubecula/rollup-plugin-bundle-scss",
+    "version": "0.1.2",
+    "description": "",
+    "main": "main.js",
+    "module": "main.js",
+    "type": "module",
+    "scripts": {
+        "pretty": "prettier . --write --tab-width 4 --print-width 120"
+    },
+    "author": "Robin van der Noord",
+    "license": "MIT",
+    "devDependencies": {
+        "colorette": "^2.0.16",
+        "node-sass": "^7.0.1"
+    },
+    "repository": "https://github.com/trialandsuccess/rollup-plugin-bundle-scss",
+    "optionalDependencies": {
+        "prettier": "^2.6.1"
+    }
 }
