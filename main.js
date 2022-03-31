@@ -3,11 +3,21 @@ import * as sass from "node-sass";
 import { green, underline } from "colorette";
 import * as path from "path";
 
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+console.log(
+    __filename,
+    __dirname,
+)
+
 function change_ext(file, ext) {
     return path.format({ ...path.parse(file), base: "", ext: `.${ext}` });
 }
 
-export function scss(files, name) {
+export function scss(files, name, dir) {
     return {
         name: "bundle-scss",
         async buildStart() {
@@ -16,8 +26,6 @@ export function scss(files, name) {
             }
         },
         async generateBundle() {
-            const dir = `${__dirname}/view/static/css`;
-
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir);
             }
