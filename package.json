@@ -1,0 +1,15 @@
+{
+  "name": "@rubecula/rollup-plugin-bundle-scss",
+  "version": "0.1.0",
+  "description": "",
+  "module": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin van der Noord",
+  "license": "MIT",
+  "devDependencies": {
+    "colorette": "^2.0.16",
+    "node-sass": "^7.0.1"
+  }
+}
