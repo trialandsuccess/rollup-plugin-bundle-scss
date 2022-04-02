@@ -1,10 +1,10 @@
 import fs from "fs";
 import * as sass from "node-sass";
-import { green, underline, yellow } from "colorette";
+import {green, underline, yellow} from "colorette";
 import * as path from "path";
 
 function change_ext(file, ext) {
-    return path.format({ ...path.parse(file), base: "", ext: `.${ext}` });
+    return path.format({...path.parse(file), base: "", ext: `.${ext}`});
 }
 
 const __dirname = path.resolve();
@@ -37,12 +37,12 @@ export function scss(files, name) {
                     indentWidth: 4,
                 },
                 (_, css) => {
+                    const out_name = change_ext(name, "css");
+
                     if (!(css && css.css)) {
                         console.log(yellow("No css could be generated for"), yellow(underline(out_name)));
                         return;
                     }
-
-                    const out_name = change_ext(name, "css");
 
                     fs.writeFileSync(`${dir}/${out_name}`, css.css);
 
